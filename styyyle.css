@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gemunu+Libre:wght@200;300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
+/* font-family: 'Gemunu Libre', sans-serif; */
+/* font-family: 'Ubuntu', sans-serif; */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: 'Gemunu Libre', sans-serif;
+    text-decoration: none;
+    font-weight: 600;
+    letter-spacing: 0.8px;
+    scroll-behavior: smooth;
+}
+body{
+  width: 100%;
+  height: 100vh;
+  overflow-x: hidden;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 130px;
+  background-color: transparent;
+  z-index: 999;
+}
+#hero{
+  background-image: url(https://images.pexels.com/photos/1083515/pexels-photo-1083515.jpeg?crop=entropy&cs=srgb&dl=pexels-zhang-kaiyv-1083515.jpg&fit=crop&fm=jpg&h=4000&w=6000);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+    width: 100%;
+  min-height: 100vh;
+}
+.linkDiv ul {
+  display: flex;
+  padding: 15px 30px;
+  gap: 0 30px;
+}
+
+.logo {
+  font-size: 30px;
+  text-transform: capitalize;
+  letter-spacing: 1.5px;
+}
+
+.togoldiv i {
+  display: none;
+}
+
+.linkDiv ul a {
+  text-transform: capitalize;
+  font-size: 20px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: white;
+}
+
+.heroInner{
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+}
+
+#hero h1 {
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+section#hero p {
+  text-align: center;
+  letter-spacing: 2px;
+  line-height: 25px;
+  width: 91%;
+  margin-bottom: 15px;
+}
+
+#bbtn {
+  background: transparent;
+  border: 2px solid white;
+  padding: 10px 30px;
+  color: white;
+  font-size: 16px;
+  letter-spacing: 2px;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+#bbtn:hover{
+  background-color: white;
+  color: black;
+}
+section#about {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 350px 0;
+}
+
+section#services {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 350px 0;
+  background-color: aliceblue;
+}
+
+section#tours {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px 0 350px 0;
+}
+
+footer {
+  padding: 50px 30px;
+  background: #21212c;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+p.ftext {
+  width: 90%;
+  text-align: center;
+  line-height: 26px;
+  font-size: 18px;
+  letter-spacing: 3px;
+}
+
+.fixedP{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: white;
+  box-shadow: 0px 0px 10px 0 #ddd;
+  color: #19191b;
+}
+.fixedP .linkDiv ul a{
+  color: #19191b;
+}
+
+@media screen and (max-width: 490px) {
+  header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 30px;
+    position: relative;
+    background-color: white;
+    color: black;
+    transition: 0.5s ease;
+  }
+  
+  .linkDiv ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    background: aliceblue;
+    left: 0;
+    width: 100%;
+    padding: 15px 30px;
+    top: 100%;
+    transition: 0.5s ease;
+  }
+  
+  .logo {
+    font-size: 25px;
+    text-transform: capitalize;
+    letter-spacing: 1.5px;
+  }
+  
+  .togoldiv i {
+    font-size: 25px;
+    display: block;
+    cursor: pointer;
+  }
+  
+  .linkDiv ul a {
+  margin-bottom: 16px;
+  text-transform: capitalize;
+  font-size: 18px;
+  letter-spacing: 2px;
+  cursor: pointer;
+  color: black;
+  }
+  .linkDiv{
+    display: none;
+    transition: 0.5s ease;
+  }
+  .showUl{
+    display: block;
+    
+  }
+}
+
+.botomToTop{
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  animation: bounce 2s ease-in-out infinite;
+  visibility: hidden;
+  /* z-index: -100; */
+}
+
+a.botomToTop button {
+  background: green;
+  border: none;
+  color: white;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.SbotomToTop{
+  visibility: visible;
+  z-index: 1000;
+}
+
+@keyframes bounce {
+  0%{
+    transform: scale(1);
+  }
+  50%{
+    transform: scale(0.8);
+  }
+  100%{
+    transform: scale(1);
+  }
+}
+section{
+  z-index: 999;
+}
